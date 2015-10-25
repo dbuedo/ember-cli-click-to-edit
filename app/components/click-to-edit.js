@@ -1,0 +1,1 @@
+export { default } from 'ember-cli-click-to-edit/components/click-to-edit';
