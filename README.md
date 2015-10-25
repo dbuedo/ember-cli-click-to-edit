@@ -1,25 +1,16 @@
-# Ember-cli-click-to-edit
+# click-to-edit component addon for Ember CLI
 
-This README outlines the details of collaborating on this Ember addon.
+Allows to show a textarea content as plain test, allowing to edit the content with just one click.
 
 ## Installation
 
-* `git clone` this repository
-* `npm install`
-* `bower install`
+* `npm install ember-cli-click-to-edit`
 
-## Running
+## Usage
 
-* `ember server`
-* Visit your app at http://localhost:4200.
+* `{{click-to-edit value="insert your content here"}}`
 
-## Running Tests
+## Npm Published
 
-* `ember test`
-* `ember test --server`
+* [https://www.npmjs.com/package/ember-cli-click-to-edit](https://www.npmjs.com/package/ember-cli-click-to-edit)
 
-## Building
-
-* `ember build`
-
-For more information on using ember-cli, visit [http://www.ember-cli.com/](http://www.ember-cli.com/).

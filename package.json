@@ -11,7 +11,7 @@
     "start": "ember server",
     "test": "ember try:testall"
   },
-  "repository": "",
+  "repository": "https://github.com/dbuedo/ember-cli-click-to-edit",
   "engines": {
     "node": ">= 0.10.0"
   },
