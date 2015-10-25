@@ -4,7 +4,7 @@ Allows to show a textarea content as plain test, allowing to edit the content wi
 
 ## Installation
 
-* `npm install ember-cli-click-to-edit`
+* `ember install ember-cli-click-to-edit`
 
 ## Usage
 
