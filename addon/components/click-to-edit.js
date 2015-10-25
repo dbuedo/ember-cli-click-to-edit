@@ -3,6 +3,7 @@ import layout from '../templates/components/click-to-edit';
 
 export default Ember.Component.extend({
   layout: layout,
+  classNames: ['click-to-edit'],
   classNameBindings: ['isEditing'],
   isEditing: false,
   
