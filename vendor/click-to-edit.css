@@ -1,3 +1,6 @@
-.click-to-edit span:hover::after {
-    content: " \270e";
+.click-to-edit p:hover::before {
+    content: "\270e ";
+}
+.click-to-edit p {
+	white-space: pre-wrap;
 }
