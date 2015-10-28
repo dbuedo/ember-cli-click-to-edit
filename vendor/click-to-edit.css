@@ -1,6 +1,10 @@
 .click-to-edit p:hover::before {
     content: "\270e ";
+    position: absolute;
+    left: -1.1em;
+    top: -0.1em;
 }
 .click-to-edit p {
 	white-space: pre-wrap;
+	position: relative;
 }
