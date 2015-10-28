@@ -1,5 +1,15 @@
 <div style="width:50%; margin: 0 auto;">
-<h2 id="title">Welcome to Ember</h2>
-{{click-to-edit value="click here to edit this value..." placeholder="edit content"}}
+<h2 id="title">Examples</h2>
+<ol>
+  <li><h4>default:</h4>
+  {{click-to-edit value="click here to edit this value..." placeholder="edit content"}}
+  </li>
+  <li><h4>with cols=40:</h4>
+  {{click-to-edit value="click here to edit this value..." cols="40" placeholder="edit content"}}
+  </li>
+  <li><h4>with cols=auto:</h4>
+  {{click-to-edit value="click here to edit this value..." cols="auto" placeholder="edit content"}}
+  </li>
+</ol>
 {{outlet}}
 </div>

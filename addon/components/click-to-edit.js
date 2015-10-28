@@ -6,13 +6,22 @@ export default Ember.Component.extend({
   classNames: ['click-to-edit'],
   classNameBindings: ['isEditing'],
   isEditing: false,
-  
+  widthResize: false,
+
   click: function() {
     this.set('isEditing', true);
-    Ember.run.scheduleOnce('afterRender', this, 'setFocus');
+    if(this.get('cols') === 'auto') {
+		this.set('widthResize', true);
+		this.set('cols', null);		
+    }
+    Ember.run.scheduleOnce('afterRender', this, 'initTextarea');
   },
-  setFocus: function() {
-	this.$('textarea').focus();
+  initTextarea: function() {
+	var txt = this.$('textarea');
+	if(this.widthResize) {
+		txt.width('100%');	
+	}
+	txt.focus(); 
   },
   actions: {
     blur: function() {
