@@ -8,3 +8,6 @@
 	white-space: pre-wrap;
 	position: relative;
 }
+.click-to-edit textarea {
+	width: 100%;
+}
