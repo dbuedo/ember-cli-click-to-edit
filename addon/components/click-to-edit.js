@@ -4,12 +4,13 @@ import layout from '../templates/components/click-to-edit';
 export default Ember.Component.extend({
   layout: layout,
   classNames: ['click-to-edit'],
-  classNameBindings: ['isEditing'],
+  classNameBindings: ['isEditing','isModified'],
   isEditing: false,
+  isModified: false,
   widthResize: false,
   heightResize: false,
   textLenght: null,
-
+  
   click: function() {
     this.set('isEditing', true);
     if(this.get('cols') === 'auto') {
@@ -24,6 +25,7 @@ export default Ember.Component.extend({
     Ember.run.scheduleOnce('afterRender', this, 'initTextarea');
   },
   initTextarea: function() {
+  	var theComponent = this;
 	var txt = this.$('textarea');
 	if(this.widthResize) {
 		txt.width('100%');	
@@ -31,6 +33,9 @@ export default Ember.Component.extend({
 	if(this.heightResize) {
 		txt.height(this.textLenght);	
 	}
+	txt.bind('input propertychange', function() {
+		theComponent.set('isModified', true);
+	});
 	txt.focus(); 
   },
   actions: {
