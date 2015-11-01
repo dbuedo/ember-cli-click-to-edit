@@ -9,7 +9,6 @@ export default Ember.Component.extend({
   isModified: false,
   widthResize: false,
   heightResize: false,
-  textLenght: null,
   
   click: function() {
     this.set('isEditing', true);
@@ -18,9 +17,8 @@ export default Ember.Component.extend({
 		this.set('cols', null);		
     }
     if(this.get('rows') === 'auto') {
-		this.set('heightResize', true);
-		this.set('rows', null);
-		this.set('textLenght', this.$('p').height());		
+    	this.set('heightResize', true);
+		this.set('rows', null);		
     }
     Ember.run.scheduleOnce('afterRender', this, 'initTextarea');
   },
@@ -31,7 +29,7 @@ export default Ember.Component.extend({
 		txt.width('100%');	
 	}
 	if(this.heightResize) {
-		txt.height(this.textLenght);	
+		autosize(txt);	
 	}
 	txt.bind('input propertychange', function() {
 		theComponent.set('isModified', true);

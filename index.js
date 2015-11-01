@@ -6,5 +6,6 @@ module.exports = {
 
   included: function(app) {
     app.import('vendor/click-to-edit.css');
+    app.import('bower_components/autosize/dist/autosize.min.js');
   }
 };
