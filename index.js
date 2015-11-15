@@ -7,7 +7,7 @@ module.exports = {
   included: function(app) {
   	this._super.included(app);
 
-    app.import('vendor/click-to-edit.css');
-    app.import(app.bowerDirectory + '/autosize/dist/autosize.min.js');
+    this.app.import('vendor/click-to-edit.css');
+    this.app.import(app.bowerDirectory + '/autosize/dist/autosize.min.js');
   }
 };
