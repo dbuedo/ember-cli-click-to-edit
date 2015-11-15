@@ -13,28 +13,28 @@ export default Ember.Component.extend({
   click: function() {
     this.set('isEditing', true);
     if(this.get('cols') === 'auto') {
-		this.set('widthResize', true);
-		this.set('cols', null);		
+		  this.set('widthResize', true);
+		  this.set('cols', null);		
     }
     if(this.get('rows') === 'auto') {
     	this.set('heightResize', true);
-		this.set('rows', null);		
+		  this.set('rows', null);		
     }
     Ember.run.scheduleOnce('afterRender', this, 'initTextarea');
   },
   initTextarea: function() {
   	var theComponent = this;
-	var txt = this.$('textarea');
-	if(this.widthResize) {
-		txt.width('100%');	
-	}
-	if(this.heightResize) {
-		autosize(txt);	
-	}
-	txt.bind('input propertychange', function() {
-		theComponent.set('isModified', true);
-	});
-	txt.focus(); 
+    var txt = this.$('textarea');
+  	if(this.widthResize) {
+      txt.width('100%');	
+    }
+    if(this.heightResize) {
+      autosize(txt);	
+    }
+    txt.bind('input propertychange', function() {
+      theComponent.set('isModified', true);
+    });
+    txt.focus(); 
   },
   actions: {
     blur: function() {
