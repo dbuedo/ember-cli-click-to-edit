@@ -1,5 +1,6 @@
 # click-to-edit for ember-cli
 [![npm version](https://badge.fury.io/js/ember-cli-click-to-edit.svg)](https://badge.fury.io/js/ember-cli-click-to-edit)
+[![Build Status](https://travis-ci.org/dbuedo/ember-cli-click-to-edit.svg)](https://travis-ci.org/dbuedo/ember-cli-click-to-edit)
 
 Show a textarea content as plain text, allowing to edit the content with just one click.
 
