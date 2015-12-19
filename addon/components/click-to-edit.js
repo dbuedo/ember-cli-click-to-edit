@@ -11,6 +11,7 @@ export default Ember.Component.extend({
   heightResize: false,
   
   click: function() {
+    console.info("clicked");
     this.set('isEditing', true);
     if(this.get('cols') === 'auto') {
 		  this.set('widthResize', true);
@@ -23,6 +24,7 @@ export default Ember.Component.extend({
     Ember.run.scheduleOnce('afterRender', this, 'initTextarea');
   },
   initTextarea: function() {
+    console.info("initTextarea");
   	var theComponent = this;
     var txt = this.$('textarea');
   	if(this.widthResize) {
@@ -32,6 +34,7 @@ export default Ember.Component.extend({
       autosize(txt);	
     }
     txt.bind('input propertychange', function() {
+      console.info('modified');
       theComponent.set('isModified', true);
     });
     txt.focus(); 
