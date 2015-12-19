@@ -36,7 +36,7 @@ test('it shows textarea after click and p after blur', function(assert) {
   assert.equal(this.$('p').length, 1);
   assert.equal(this.$('textarea').length, 0);
 });
-/*
+
 test('it has is-modified class when content changed', function(assert) {
   assert.expect(1);
 
@@ -46,10 +46,7 @@ test('it has is-modified class when content changed', function(assert) {
   this.$('p').click();
 
   this.set('content', 'changed content'); 
-  this.$('textarea').trigger('propertychange');
   this.$('textarea').focusout();
 
-  assert.equal(this.$().html(), '');
-  assert.ok(this.$().hasClass('is-modified'));
+  assert.equal(this.$('.is-modified').length, 1);    
 });
-*/
