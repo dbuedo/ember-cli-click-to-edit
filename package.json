@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-click-to-edit",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Addon that add a click-to-edit textarea component.",
   "directories": {
     "doc": "doc",
